@@ -1,0 +1,21 @@
+3 Aspects of Efficiency: 
+- Time it takes to Write your Code 
+- Time is takes to Run your Code 
+- Amount of memory your code uses 
+
+Tradeoffs among aspects: 
+	improve running time of code by spending a lot of time writing it (only for code that is to be run many times in future)
+	tradeoff between memory/running time: store more items in memory but uses more memory
+
+R is designed to be easy to use (advantage for coding time efficiency but not run time efficiency)
+	summary is different based on variable type (numeric,factor,character)
+	slower than C as it does a lot of work behind the scenes. 
+
+Outline: Strategies for improving Efficiency 
+1) Avoid repetition (functions)
+2) Vector calculations are better than for loops 
+3) Use existing functions 
+4) Plan ahead for memory use
+
+
+Vector Calculation are BETTER than for loops
