@@ -95,4 +95,22 @@ microbenchmark( Powers.of.3.for.loop(), Powers.of.3.vector() )
 ames = read.csv("AmesHousing.csv")
 ames2 = as.matrix(ames)
 
+j = 1
+y = matrix( , nr = 2930, nc=82 )
+num.rows = dim(ames2)[1]
+for(i in 1:num.rows){
+  quality = ames2[ i, c(32,42,55) ]
+  quality = quality[ !is.na(quality) ]
+  at.least.one.Excellent = any( quality == "Ex" )
+  if( at.least.one.Excellent ){
+    y[j,] = ames2[i,]
+    j = j + 1
+  }
+}
 
+ames_subset = y[ 1: (j-1), ]
+ames_subset[1,c(32,42,55)]
+dim(ames_subset)
+
+
+?system.time
